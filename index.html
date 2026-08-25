@@ -183,7 +183,6 @@
 
             <!-- Botones de Biblioteca Digital Destacados -->
             <div class="flex flex-col sm:flex-row justify-center gap-8 mt-10">
-                <!-- Botón Verde Pino con NUEVO LINK -->
                 <a href="https://bibliotecadigital.bnv.gob.ve/?s=Mario+Brice%C3%B1o+iragorry" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pine text-white hover:bg-pine-dark transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
                     <i data-lucide="library" class="w-8 h-8 mr-4 text-pastelYellow group-hover:scale-110 transition-transform"></i>
                     <div class="text-left">
@@ -192,7 +191,6 @@
                     </div>
                 </a>
                 
-                <!-- Botón Amarillo Pastel -->
                 <a href="https://archivo.redhistoriave.org/pieza/tomo-xv-obra-literaria-iv-ensayos-ii" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pastelYellow text-pine hover:bg-pastelYellow-hover transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
                     <i data-lucide="book-open" class="w-8 h-8 mr-4 group-hover:scale-110 transition-transform"></i>
                     <div class="text-left">
@@ -202,44 +200,54 @@
                 </a>
             </div>
 
-            <!-- Books Grid -->
+            <!-- Books Grid (Convertidos todos en enlaces) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
-                <!-- Book 1 -->
-                <div class="bg-white border border-gray-100 p-8 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl">
+                
+                <!-- Book 1: Mensaje sin Destino -->
+                <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
-                        <div class="bg-gray-50 aspect-[3/4] flex items-center justify-center p-6 text-center border border-gray-200 rounded-md">
-                            <p class="font-title text-sm font-bold uppercase tracking-widest text-pine">Mensaje sin destino</p>
+                        <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
+                            <img src="mensaje sin destino.jpg" alt="Portada de Mensaje sin Destino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Mensaje+sin+Destino'">
                         </div>
-                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center">Mensaje sin Destino</h3>
+                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Mensaje sin Destino</h3>
                     </div>
-                </div>
-                <!-- Book 2 -->
-                <div class="bg-white border border-gray-100 p-8 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl">
+                </a>
+
+                <!-- Book 2: Alegría de la Tierra -->
+                <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
-                        <div class="bg-gray-50 aspect-[3/4] flex items-center justify-center p-6 text-center border border-gray-200 rounded-md">
-                            <p class="font-title text-sm font-bold uppercase tracking-widest text-pine">Alegría de la Tierra</p>
+                        <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
+                            <img src="alegría de la tierra.jpg" alt="Portada de Alegría de la Tierra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Alegr%C3%ADa+de+la+Tierra'">
                         </div>
-                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center">Alegría de la Tierra</h3>
+                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Alegría de la Tierra</h3>
                     </div>
-                </div>
-                <!-- Book 3 -->
-                <div class="bg-white border border-gray-100 p-8 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl">
+                </a>
+
+                <!-- Book 3: Tapices de Historia Patria (ACTUALIZADO CON LINK Y WEBP) -->
+                <a href="https://bibliotecadigital.bnv.gob.ve/?p=986" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
-                        <div class="bg-gray-50 aspect-[3/4] flex items-center justify-center p-6 text-center border border-gray-200 rounded-md">
-                            <p class="font-title text-sm font-bold uppercase tracking-widest text-pine">Tapices de Historia</p>
+                        <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                            <!-- Indicador de enlace -->
+                            <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
+                            </div>
+                            <!-- Imagen en formato WEBP -->
+                            <img src="tapices de historia patria.webp" alt="Portada de Tapices de Historia Patria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Tapices+de+Historia'">
                         </div>
-                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center">Tapices de Historia Patria</h3>
+                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Tapices de Historia Patria</h3>
                     </div>
-                </div>
-                <!-- Book 4 -->
-                <div class="bg-white border border-gray-100 p-8 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl">
+                </a>
+
+                <!-- Book 4: Lecturas Venezolanas -->
+                <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
-                        <div class="bg-gray-50 aspect-[3/4] flex items-center justify-center p-6 text-center border border-gray-200 rounded-md">
-                            <p class="font-title text-sm font-bold uppercase tracking-widest text-pine">Lecturas Venezolanas</p>
+                        <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
+                            <img src="lecturas venezuela.jpg" alt="Portada de Lecturas Venezolanas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Lecturas+Venezolanas'">
                         </div>
-                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center">Lecturas Venezolanas</h3>
+                        <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Lecturas Venezolanas</h3>
                     </div>
-                </div>
+                </a>
+
             </div>
         </div>
     </section>
