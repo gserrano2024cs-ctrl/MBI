@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Briceño Hoy | Fundación MBI</title>
+    <title>Mario Briceño-Iragorry Hoy | Fundación MBI</title>
     
-    <!-- Google Fonts: Incluyendo las tipografías de ambos códigos (Dancing Script, Cinzel, Newsreader, Plus Jakarta Sans) -->
+    <!-- Miniatura / Favicon (Reemplaza 'logo-mbi.png' con tu archivo real) -->
+    <link rel="icon" href="logo-mbi.png" type="image/png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel:wght@400;600;700&family=Newsreader:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,20 +25,9 @@
             theme: {
                 extend: {
                     colors: {
-                        cream: {
-                            50: '#FAF8F5',
-                            100: '#F4EFEA',
-                            200: '#E6DDD4',
-                        },
-                        charcoal: {
-                            800: '#212121',
-                            900: '#141414',
-                        },
-                        bronze: {
-                            500: '#A37E58',
-                            600: '#8A6643',
-                            700: '#6E4E30',
-                        }
+                        cream: { 50: '#FAF8F5', 100: '#F4EFEA', 200: '#E6DDD4' },
+                        charcoal: { 800: '#212121', 900: '#141414' },
+                        bronze: { 500: '#A37E58', 600: '#8A6643', 700: '#6E4E30' }
                     },
                     fontFamily: {
                         title: ['Cinzel', 'serif'],
@@ -48,15 +40,8 @@
         }
     </script>
     <style>
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        
-        /* Estilos para el carrusel de experiencias */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .custom-scrollbar::-webkit-scrollbar { height: 8px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
     </style>
@@ -67,25 +52,21 @@
     <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-cream-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
             
-            <!-- EL LOGO: Reemplaza el contenido del div class="logo-container" por tu etiqueta <img src="..."> si deseas usar una imagen -->
+            <!-- EL LOGO (Reemplaza con <img src="logo-mbi.png" class="h-10"> si lo prefieres) -->
             <div class="logo-container flex items-center font-bold text-xl md:text-2xl">
                 <span class="uppercase tracking-wider text-charcoal-900">MBI</span> 
-                <span class="font-cursiva text-bronze-600 ml-1 mt-1 lowercase text-3xl">hoy</span>
+                <span class="font-cursiva text-[#f1c40f] ml-1 mt-1 lowercase text-3xl">hoy</span>
             </div>
             
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex space-x-6 text-xs tracking-widest font-medium uppercase text-charcoal-800">
-                <a href="#experiencias" class="hover:text-bronze-600 transition-colors">Trujillo</a>
-                <a href="#movimiento" class="hover:text-bronze-600 transition-colors">Shorts</a>
-                <a href="#mensaje-con-destino" class="hover:text-bronze-600 transition-colors">Mensaje</a>
-                <a href="#catalogo" class="hover:text-bronze-600 transition-colors">Obras</a>
-                <a href="#aliados" class="hover:text-bronze-600 transition-colors">Aliados</a>
+                <a href="#inicio" class="hover:text-bronze-600 transition-colors">Inicio</a>
+                <a href="#multimedia" class="hover:text-bronze-600 transition-colors">Multimedia</a>
+                <a href="#catalogo" class="hover:text-bronze-600 transition-colors">Catálogo de Obras</a>
+                <a href="#beatriz" class="hover:text-bronze-600 transition-colors">Beatriz Briceño</a>
             </nav>
 
-            <!-- Contact CTA -->
-            <a href="#contacto" class="hidden lg:inline-flex items-center text-xs uppercase tracking-widest px-5 py-2.5 border border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-white transition-all duration-300">
-                Contacto
-            </a>
+            <a href="#contacto" class="hidden lg:inline-flex items-center text-xs uppercase tracking-widest px-5 py-2.5 border border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-white transition-all duration-300">Contacto</a>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="lg:hidden p-2 text-charcoal-900 focus:outline-none" aria-label="Abrir Menú">
@@ -95,182 +76,207 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden bg-cream-50 border-b border-cream-200 px-6 py-6 space-y-4">
-            <a href="#experiencias" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Trujillo</a>
-            <a href="#movimiento" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Shorts y Videos</a>
-            <a href="#mensaje-con-destino" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Mensaje con Destino</a>
+            <a href="#inicio" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Inicio</a>
+            <a href="#multimedia" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Multimedia</a>
             <a href="#catalogo" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Catálogo de Obras</a>
-            <a href="#contacto" class="inline-block mt-4 text-xs uppercase tracking-widest px-5 py-2.5 border border-charcoal-900 text-charcoal-900">Contacto</a>
+            <a href="#beatriz" class="block text-xs uppercase tracking-widest text-charcoal-800 hover:text-bronze-600">Beatriz Briceño</a>
         </div>
     </header>
 
     <!-- FONDO PRINCIPAL / HERO SECTION -->
-    <!-- Cambia 'URL_DE_TU_FONDO_AQUI' por la ruta de tu imagen -->
-    <section class="relative h-screen flex items-center justify-center text-center text-white" 
-             style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('URL_DE_TU_FONDO_AQUI') center/cover no-repeat;">
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tight">
-            Mario Briceño<span class="font-cursiva text-[#f1c40f] ml-3 text-6xl md:text-8xl lg:text-9xl lowercase">hoy</span>
-        </h1>
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <!-- Fondo difuminado de EL AVILA -->
+        <div class="absolute inset-0 bg-cover bg-center blur-sm transform scale-105" 
+             style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('EL_AVILA.jpg'); z-index: -1;">
+        </div>
         
-        <!-- Indicador de scroll -->
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-sans tracking-tight leading-tight">
+                Mario Briceño-Iragorry<br class="md:hidden">
+                <span class="font-cursiva text-[#f1c40f] ml-3 text-6xl md:text-8xl lg:text-9xl lowercase block md:inline mt-2 md:mt-0">hoy</span>
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-sm md:text-lg text-cream-100 font-light italic">
+                Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.
+            </p>
+        </div>
+        
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#experiencias" class="text-white opacity-80 hover:opacity-100">
+            <a href="#pensamiento" class="text-white opacity-80 hover:opacity-100">
                 <i data-lucide="chevron-down" class="w-10 h-10"></i>
             </a>
         </div>
     </section>
 
-    <!-- CARRUSEL: EXPERIENCIAS EN TRUJILLO -->
-    <section id="experiencias" class="py-20 bg-white border-b border-cream-200">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center space-y-3 mb-12">
-                <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Trabajo de Campo</span>
-                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">Experiencias en Trujillo</h2>
-                <div class="w-12 h-0.5 bg-bronze-500 mx-auto"></div>
-                <p class="text-sm md:text-base text-gray-700 font-light">Años de labor, distribución y actividades comunitarias en el estado.</p>
-            </div>
-            
-            <!-- Cambia 'foto1.jpg', 'foto2.jpg' por las rutas de tus imágenes -->
-            <div class="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory custom-scrollbar">
-                <div class="min-w-[300px] md:min-w-[350px] h-[250px] rounded-xl snap-start flex items-end p-6 text-white font-bold text-lg bg-cover bg-center shadow-md" style="background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url('foto1.jpg');">Entrega de libros</div>
-                <div class="min-w-[300px] md:min-w-[350px] h-[250px] rounded-xl snap-start flex items-end p-6 text-white font-bold text-lg bg-cover bg-center shadow-md" style="background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url('foto2.jpg');">Actividad Comunitaria</div>
-                <div class="min-w-[300px] md:min-w-[350px] h-[250px] rounded-xl snap-start flex items-end p-6 text-white font-bold text-lg bg-cover bg-center shadow-md" style="background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url('foto3.jpg');">Distribución</div>
-                <div class="min-w-[300px] md:min-w-[350px] h-[250px] rounded-xl snap-start flex items-end p-6 text-white font-bold text-lg bg-cover bg-center shadow-md" style="background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url('foto4.jpg');">Talleres y lecturas</div>
-            </div>
+    <!-- CITAS Y PENSAMIENTO (Sección agregada) -->
+    <section id="pensamiento" class="py-16 bg-cream-50 border-b border-cream-200">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 space-y-12">
+            <!-- Cita de MBI -->
+            <blockquote class="text-center space-y-4">
+                <i data-lucide="quote" class="w-8 h-8 mx-auto text-bronze-500 mb-4 opacity-50"></i>
+                <p class="font-serif text-lg md:text-2xl text-charcoal-900 leading-relaxed">
+                    «Sin negar el sentido ecuménico del hombre, he defendido de manera ardorosa y sistemática los valores de lo venezolano y he denunciado en forma angustiada el proceso de disolución promovido en el esqueleto de la sociedad nacional por la presencia de antivalores que desdicen nuestra tradición de pueblo».
+                </p>
+                <footer class="text-xs font-sans tracking-widest uppercase text-bronze-600 font-semibold">
+                    — Mario Briceño Iragorry, 1954
+                </footer>
+            </blockquote>
+
+            <div class="w-24 h-px bg-cream-200 mx-auto"></div>
+
+            <!-- Cita de Milagros Socorro -->
+            <blockquote class="p-8 bg-white border-l-4 border-bronze-500 shadow-sm text-left">
+                <p class="font-serif text-base md:text-lg text-gray-700 italic leading-snug">
+                    «Mensaje sin destino... es en el fondo un breviario de aprendizaje, un ideario, un llamado a despertar, un clamor que se alzó con mucha anticipación contra lo que Arturo Uslar-Pietri denominó, ventinueve años más tarde... la "ola del petróleo"».
+                </p>
+                <footer class="mt-4 text-[11px] font-sans tracking-widest uppercase text-gray-500 font-semibold">
+                    — Milagros Socorro <span class="block mt-1 font-normal capitalize">En su artículo "Mario Briceño-Iragorry, la angustia de nuestro drama"</span>
+                </footer>
+            </blockquote>
         </div>
     </section>
 
-    <!-- VIDEOS SHORTS: MBI EN MOVIMIENTO -->
-    <section id="movimiento" class="py-20 bg-cream-50 border-b border-cream-200">
+    <!-- MULTIMEDIA Y SHORTS -->
+    <section id="multimedia" class="py-20 bg-white border-b border-cream-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="text-center space-y-3 mb-12">
                 <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Dinamismo Visual</span>
-                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">MBI en Movimiento</h2>
+                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">Multimedia</h2>
                 <div class="w-12 h-0.5 bg-bronze-500 mx-auto"></div>
             </div>
             
-            <!-- Cambia 'short1.mp4' y los 'poster1.jpg' por las rutas de tus videos y portadas -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg border-4 border-white" controls poster="poster1.jpg">
-                    <source src="short1.mp4" type="video/mp4">
-                    Tu navegador no soporta el formato de video.
+                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg" controls poster="poster1.jpg">
+                    <source src="short1.mp4" type="video/mp4"> Tu navegador no soporta el formato de video.
                 </video>
-                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg border-4 border-white" controls poster="poster2.jpg">
+                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg" controls poster="poster2.jpg">
                     <source src="short2.mp4" type="video/mp4">
                 </video>
-                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg border-4 border-white" controls poster="poster3.jpg">
+                <video class="w-full rounded-xl aspect-[9/16] bg-black object-cover shadow-lg" controls poster="poster3.jpg">
                     <source src="short3.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
     </section>
 
-    <!-- MENSAJE CON DESTINO (De la Fundación) -->
-    <section id="mensaje-con-destino" class="py-20 bg-white border-b border-cream-200">
-        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-10">
-            <div class="space-y-3">
-                <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Obra Cumbre & Vigor Vital</span>
-                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase tracking-wide">
-                    De "Mensaje sin Destino" a la Conciencia Nacional
-                </h2>
-                <div class="w-12 h-0.5 bg-bronze-500 mx-auto"></div>
-            </div>
-
-            <blockquote class="p-8 sm:p-12 bg-cream-50 border-l-2 border-bronze-500 text-left my-8 shadow-sm">
-                <p class="font-serif text-xl sm:text-2xl lg:text-3xl text-charcoal-900 italic leading-snug">
-                    "Llamo al vino, vino, y a la tierra, tierra, sin pesimismo ni desesperación; pero con el profundo convencimiento de que nos hallamos en una hora crítica donde el único camino de salvación es mirarnos por dentro."
-                </p>
-                <footer class="mt-6 text-xs font-sans tracking-widest uppercase text-bronze-600 font-semibold">
-                    — Mario Briceño Iragorry, <span class="italic capitalize font-normal text-gray-600">Mensaje sin destino (1952)</span>
-                </footer>
-            </blockquote>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-sm md:text-base text-gray-700 leading-relaxed font-light">
-                <p>En su monumental ensayo de 1952, Briceño Iragorry diagnosticó la crisis de la nacionalidad venezolana, advirtiendo sobre los peligros de la "pérdida del sentido histórico".</p>
-                <p>Hoy, rescatamos esta visión transformándola en un <strong>"Mensaje CON destino"</strong>: un faro ético e intelectual dirigido a las nuevas generaciones de venezolanos.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATÁLOGO DE LIBROS -->
+    <!-- CATÁLOGO DE OBRAS Y BIBLIOTECA DIGITAL -->
     <section id="catalogo" class="py-20 bg-cream-50 border-b border-cream-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+            
             <div class="text-center space-y-3 max-w-2xl mx-auto">
-                <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Publicaciones Conservadas</span>
-                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">
-                    Catálogo de Obras
-                </h2>
+                <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Legado Literario</span>
+                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">Catálogo de Obras</h2>
                 <div class="w-12 h-0.5 bg-bronze-500 mx-auto"></div>
+                <p class="text-sm text-gray-600 font-light pt-4">
+                    Adéntrate en la vasta variedad de la obra ensayística e histórica de Mario Briceño-Iragorry. A continuación, algunas de sus portadas más famosas y el acceso completo a sus textos digitalizados.
+                </p>
+            </div>
+
+            <!-- Botones de Biblioteca Digital Destacados -->
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mt-8">
+                <a href="https://bibliotecadigital.bnv.gob.ve/?coleccion=mario-briceno-iragorry" target="_blank" class="flex items-center justify-center px-6 py-4 bg-charcoal-900 text-white hover:bg-bronze-600 transition-colors shadow-md rounded-sm group">
+                    <i data-lucide="library" class="w-6 h-6 mr-3 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-left">
+                        <span class="block text-[10px] uppercase tracking-widest opacity-80">Acceso a la</span>
+                        <span class="block text-sm font-bold tracking-wide">Biblioteca Mario Briceño-Iragorry (BNV)</span>
+                    </div>
+                </a>
+                
+                <a href="https://archivo.redhistoriave.org/pieza/tomo-xv-obra-literaria-iv-ensayos-ii" target="_blank" class="flex items-center justify-center px-6 py-4 bg-white border border-charcoal-900 text-charcoal-900 hover:bg-charcoal-50 transition-colors shadow-sm rounded-sm group">
+                    <i data-lucide="book-open" class="w-6 h-6 mr-3 text-bronze-600 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-left">
+                        <span class="block text-[10px] uppercase tracking-widest text-gray-500">Libros Digitalizados</span>
+                        <span class="block text-sm font-bold tracking-wide">Archivo Red Historia VE</span>
+                    </div>
+                </a>
             </div>
 
             <!-- Books Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-8">
                 <!-- Book 1 -->
                 <div class="bg-white border border-cream-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
                         <div class="bg-cream-200 aspect-[3/4] flex items-center justify-center p-4 text-center border border-cream-200">
-                            <div class="space-y-2">
-                                <p class="font-title text-xs font-bold uppercase tracking-wider">Mensaje sin destino</p>
-                            </div>
+                            <!-- Si tienes imagenes de portada, cambialas por <img src="portada1.jpg"> -->
+                            <p class="font-title text-xs font-bold uppercase tracking-wider">Mensaje sin destino</p>
                         </div>
                         <h3 class="font-title text-base font-bold text-charcoal-900">Mensaje sin Destino</h3>
-                        <p class="text-xs text-gray-600 font-light">Ensayo fundamental sobre la crisis de la nacionalidad.</p>
                     </div>
                 </div>
                 <!-- Book 2 -->
                 <div class="bg-white border border-cream-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
                         <div class="bg-cream-200 aspect-[3/4] flex items-center justify-center p-4 text-center border border-cream-200">
-                            <div class="space-y-2">
-                                <p class="font-title text-xs font-bold uppercase tracking-wider">Alegría de la Tierra</p>
-                            </div>
+                            <p class="font-title text-xs font-bold uppercase tracking-wider">Alegría de la Tierra</p>
                         </div>
                         <h3 class="font-title text-base font-bold text-charcoal-900">Alegría de la Tierra</h3>
-                        <p class="text-xs text-gray-600 font-light">Canto al trabajo rural y la reconexión con el suelo nativo.</p>
                     </div>
                 </div>
                 <!-- Book 3 -->
                 <div class="bg-white border border-cream-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
                         <div class="bg-cream-200 aspect-[3/4] flex items-center justify-center p-4 text-center border border-cream-200">
-                            <div class="space-y-2">
-                                <p class="font-title text-xs font-bold uppercase tracking-wider">Tapices de Historia</p>
-                            </div>
+                            <p class="font-title text-xs font-bold uppercase tracking-wider">Tapices de Historia</p>
                         </div>
                         <h3 class="font-title text-base font-bold text-charcoal-900">Tapices de Historia Patria</h3>
-                        <p class="text-xs text-gray-600 font-light">Episodios decisivos de la gesta e identidad venezolana.</p>
                     </div>
                 </div>
                 <!-- Book 4 -->
                 <div class="bg-white border border-cream-200 p-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
                         <div class="bg-cream-200 aspect-[3/4] flex items-center justify-center p-4 text-center border border-cream-200">
-                            <div class="space-y-2">
-                                <p class="font-title text-xs font-bold uppercase tracking-wider">Lecturas Venezolanas</p>
-                            </div>
+                            <p class="font-title text-xs font-bold uppercase tracking-wider">Lecturas Venezolanas</p>
                         </div>
                         <h3 class="font-title text-base font-bold text-charcoal-900">Lecturas Venezolanas</h3>
-                        <p class="text-xs text-gray-600 font-light">Selección de prosas para la instrucción cívica del país.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UNIVERSIDADES ALIADAS -->
-    <section id="aliados" class="py-20 bg-white border-b border-cream-200">
+    <!-- SECCIÓN BEATRIZ BRICEÑO-PICÓN -->
+    <section id="beatriz" class="py-20 bg-white border-b border-cream-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="text-center space-y-3 mb-12">
-                <span class="text-xs font-semibold tracking-widest text-bronze-600 uppercase">Colaboración Institucional</span>
-                <h2 class="font-title text-2xl sm:text-3xl font-bold text-charcoal-900 uppercase">Universidades Aliadas</h2>
-                <div class="w-12 h-0.5 bg-bronze-500 mx-auto"></div>
-            </div>
-            
-            <!-- Sustituye los src por los logos reales -->
-            <div class="flex justify-center items-center flex-wrap gap-12 sm:gap-20 opacity-80">
-                <img src="logo-uni1.png" alt="Universidad 1" class="max-w-[120px] sm:max-w-[150px] grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="logo-uni2.png" alt="Universidad 2" class="max-w-[120px] sm:max-w-[150px] grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="logo-uni3.png" alt="Universidad 3" class="max-w-[120px] sm:max-w-[150px] grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="logo-uni4.png" alt="Universidad 4" class="max-w-[120px] sm:max-w-[150px] grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Imagen Bea -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-4 border border-bronze-500/30 transform translate-x-3 translate-y-3"></div>
+                        <img src="Bea.jpg" alt="Beatriz Briceño-Picón" class="relative z-10 w-full aspect-[4/5] object-cover shadow-xl border border-cream-200 bg-cream-100" onerror="this.src='https://via.placeholder.com/400x500?text=Bea.jpg'">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="inline-block text-xs font-semibold tracking-widest text-bronze-600 uppercase">
+                        Custodia y Memoria Familiar
+                    </span>
+                    <h2 class="font-title text-3xl sm:text-4xl font-bold tracking-tight text-charcoal-900">
+                        Beatriz Briceño-Picón
+                    </h2>
+                    <div class="w-12 h-0.5 bg-bronze-500"></div>
+                    
+                    <div class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed font-light">
+                        <p>
+                            Hija del ilustre ensayista, Beatriz Briceño-Picón ha dedicado su vida a una labor silente pero trascendental: la conservación, cuidado y difusión del invaluable legado histórico, literario y moral de su padre.
+                        </p>
+                        <p>
+                            Persona que aportó su profunda sabiduría y convicciones para conservar y preservar la institución de la familia. Su formación profesional y espiritual le ha permitido no solo resguardar documentos, sino mantener vivo el espíritu humanista de la casa Briceño para las nuevas generaciones.
+                        </p>
+                        <p>
+                            Sus metas siempre han apuntado a que la trascendencia de los valores patrios y éticos no se pierdan en el olvido, haciendo del hogar el primer centro de aprendizaje cívico.
+                        </p>
+                    </div>
+
+                    <div class="pt-6">
+                        <!-- Reemplazar con el enlace real sobre Beatriz -->
+                        <a href="LINK_SOBRE_LA_VIDA_DE_BEATRIZ" target="_blank" class="inline-flex justify-center items-center px-6 py-3 bg-bronze-600 text-white text-xs uppercase tracking-widest hover:bg-charcoal-900 transition-all duration-300 shadow-sm">
+                            Conocer más sobre su vida
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -281,9 +287,8 @@
             <div class="md:col-span-5 space-y-4">
                 <h3 class="font-title text-lg font-bold tracking-wider uppercase text-white">Fundación MBI</h3>
                 <p class="text-xs text-cream-200/80 leading-relaxed font-light max-w-sm">
-                    Institución civil dedicada a la preservación del patrimonio histórico, intelectual y ético de Don Mario Briceño Iragorry.
+                    Institución civil dedicada a la preservación del patrimonio histórico, intelectual y ético de Don Mario Briceño-Iragorry.
                 </p>
-                <div class="pt-2 text-xs text-bronze-500 font-serif italic">"Sembrar la memoria para cosechar la patria."</div>
             </div>
             <div class="md:col-span-7 space-y-3">
                 <h4 class="text-xs font-semibold tracking-widest text-bronze-500 uppercase">Contacto</h4>
@@ -301,7 +306,7 @@
         </div>
         <div class="border-t border-charcoal-800 bg-charcoal-900/50 py-6">
             <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-[11px] text-cream-200/60">
-                <p>© 2026 Fundación Mario Briceño Iragorry. Todos los derechos reservados.</p>
+                <p>© 2026 Fundación Mario Briceño-Iragorry. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
