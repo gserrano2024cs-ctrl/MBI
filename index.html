@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Briceño-Iragorry Hoy | Fundación MBI</title>
+    <title>Mario Briceño-Iragorry Hoy</title>
     
-    <!-- Miniatura / Favicon (Carga aquí tu archivo de logo verde con amarillo) -->
-    <link rel="icon" href="logo-mbi.png" type="image/png">
+    <!-- Miniatura / Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
     
-    <!-- Google Fonts: Montserrat (Principal) y Dancing Script (Cursiva) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons CDN -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- Custom Tailwind Configuration -->
@@ -25,19 +25,9 @@
             theme: {
                 extend: {
                     colors: {
-                        pine: {
-                            DEFAULT: '#115E3E', // Verde Pino
-                            dark: '#0A3B26',
-                            light: '#1B8257'
-                        },
-                        pastelYellow: {
-                            DEFAULT: '#FEF08A', // Amarillo Pastel
-                            hover: '#FDE047'
-                        },
-                        charcoal: { 
-                            800: '#333333', 
-                            900: '#1A1A1A' 
-                        }
+                        pine: { DEFAULT: '#115E3E', dark: '#0A3B26', light: '#1B8257' },
+                        pastelYellow: { DEFAULT: '#FEF08A', hover: '#FDE047' },
+                        charcoal: { 800: '#333333', 900: '#1A1A1A' }
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -52,8 +42,6 @@
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #115E3E; border-radius: 4px; }
     </style>
 </head>
 <body class="bg-white text-charcoal-900 font-sans antialiased selection:bg-pine selection:text-white flex flex-col min-h-screen">
@@ -62,10 +50,9 @@
     <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
             
-            <!-- EL LOGO (Verde con Amarillo) -->
-            <div class="logo-container flex items-center font-bold text-2xl md:text-3xl bg-pine px-4 py-2 rounded-lg shadow-md border border-pine-light">
-                <span class="uppercase tracking-wider text-white">MBI</span> 
-                <span class="font-cursiva text-pastelYellow ml-2 mt-1 lowercase text-4xl" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">hoy</span>
+            <!-- EL LOGO DE LA PÁGINA: Debe llamarse 'logo.png' y estar en la misma carpeta -->
+            <div class="logo-container flex items-center">
+                <img src="logo.png" alt="Mario Briceño-Iragorry hoy" class="h-12 md:h-16 object-contain" onerror="this.src='https://via.placeholder.com/200x60?text=LOGO.PNG'">
             </div>
             
             <!-- Desktop Navigation -->
@@ -95,7 +82,6 @@
 
     <!-- FONDO PRINCIPAL / HERO SECTION -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden mt-10">
-        <!-- Fondo difuminado de EL AVILA -->
         <div class="absolute inset-0 bg-cover bg-center blur-sm transform scale-105" 
              style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL_AVILA.jpg'); z-index: -1;">
         </div>
@@ -120,7 +106,6 @@
     <!-- CITAS Y PENSAMIENTO -->
     <section id="pensamiento" class="py-20 bg-white border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-6 lg:px-12 space-y-16">
-            <!-- Cita de MBI -->
             <blockquote class="text-center space-y-6">
                 <i data-lucide="quote" class="w-10 h-10 mx-auto text-pastelYellow-hover mb-4"></i>
                 <p class="font-serif text-xl md:text-3xl text-pine-dark leading-relaxed font-medium italic">
@@ -133,7 +118,6 @@
 
             <div class="w-32 h-1 bg-pastelYellow mx-auto rounded-full"></div>
 
-            <!-- Cita de Fidel Rodríguez Legendre -->
             <blockquote class="p-8 md:p-10 bg-gray-50 border-l-8 border-pine shadow-sm text-left rounded-r-lg">
                 <p class="font-serif text-lg md:text-xl text-charcoal-800 italic leading-relaxed">
                     «Parafraseando a Rodríguez Legendre al examinar el pensamiento de Briceño Iragorry, Universidad y Juventud no son meros espacios de estudio, sino el auténtico bastión moral e intelectual de la nación. De su unión depende la formación de una conciencia crítica indispensable para defender los valores patrios y frenar el avance del pragmatismo que alimenta la dinámica del antipaís.»
@@ -155,15 +139,23 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster1.jpg">
-                    <source src="short1.mp4" type="video/mp4"> Tu navegador no soporta el formato de video.
+                
+                <!-- Video 1: CARLOS MATA -->
+                <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
+                    <source src="CARLOS MATA.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
                 </video>
+                
+                <!-- Video 2 -->
                 <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster2.jpg">
                     <source src="short2.mp4" type="video/mp4">
                 </video>
+                
+                <!-- Video 3 -->
                 <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster3.jpg">
                     <source src="short3.mp4" type="video/mp4">
                 </video>
+
             </div>
         </div>
     </section>
@@ -181,9 +173,8 @@
                 </p>
             </div>
 
-            <!-- Botones de Biblioteca Digital Destacados -->
             <div class="flex flex-col sm:flex-row justify-center gap-8 mt-10">
-                <a href="https://bibliotecadigital.bnv.gob.ve/?s=Mario+Brice%C3%B1o+iragorry" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pine text-white hover:bg-pine-dark transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
+                <a href="https://bibliotecadigital.bnv.gob.ve/?coleccion=mario-briceno-iragorry" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pine text-white hover:bg-pine-dark transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
                     <i data-lucide="library" class="w-8 h-8 mr-4 text-pastelYellow group-hover:scale-110 transition-transform"></i>
                     <div class="text-left">
                         <span class="block text-xs uppercase font-semibold tracking-widest text-pastelYellow">Acceso a la</span>
@@ -191,7 +182,7 @@
                     </div>
                 </a>
                 
-                <a href="https://archivo.redhistoriave.org/pieza/tomo-xv-obra-literaria-iv-ensayos-ii" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pastelYellow text-pine hover:bg-pastelYellow-hover transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
+                <a href="https://archivo.redhistoriave.org/coleccion/obras-completas-de-mario-briceno-iragorry?page=1&orderby=asc" target="_blank" class="flex items-center justify-center px-8 py-5 bg-pastelYellow text-pine hover:bg-pastelYellow-hover transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
                     <i data-lucide="book-open" class="w-8 h-8 mr-4 group-hover:scale-110 transition-transform"></i>
                     <div class="text-left">
                         <span class="block text-xs uppercase font-semibold tracking-widest text-pine-dark opacity-80">Libros Digitalizados</span>
@@ -200,10 +191,7 @@
                 </a>
             </div>
 
-            <!-- Books Grid (Convertidos todos en enlaces) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
-                
-                <!-- Book 1: Mensaje sin Destino -->
                 <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
@@ -213,7 +201,6 @@
                     </div>
                 </a>
 
-                <!-- Book 2: Alegría de la Tierra -->
                 <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
@@ -223,22 +210,18 @@
                     </div>
                 </a>
 
-                <!-- Book 3: Tapices de Historia Patria (ACTUALIZADO CON LINK Y WEBP) -->
                 <a href="https://bibliotecadigital.bnv.gob.ve/?p=986" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
-                            <!-- Indicador de enlace -->
                             <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                                 <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
                             </div>
-                            <!-- Imagen en formato WEBP -->
                             <img src="tapices de historia patria.webp" alt="Portada de Tapices de Historia Patria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Tapices+de+Historia'">
                         </div>
                         <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Tapices de Historia Patria</h3>
                     </div>
                 </a>
 
-                <!-- Book 4: Lecturas Venezolanas -->
                 <a href="#" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md">
@@ -247,53 +230,39 @@
                         <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Lecturas Venezolanas</h3>
                     </div>
                 </a>
-
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN BEATRIZ BRICEÑO-PICÓN -->
-    <section id="beatriz" class="py-24 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <!-- SECCIÓN BEATRIZ BRICEÑO-PICÓN (Diseño Editorial Minimalista) -->
+    <section id="beatriz" class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
                 
-                <!-- Imagen Bea -->
-                <div class="lg:col-span-5 relative flex justify-center">
-                    <div class="relative w-full max-w-md">
-                        <!-- Decoración de fondo verde pino -->
-                        <div class="absolute -inset-4 bg-pine rounded-xl transform translate-x-4 translate-y-4"></div>
-                        <img src="Bea.jpg" alt="Beatriz Briceño-Picón" class="relative z-10 w-full aspect-[4/5] object-cover shadow-2xl rounded-xl border-4 border-white bg-gray-100" onerror="this.src='https://via.placeholder.com/400x500?text=Bea.jpg'">
-                    </div>
+                <!-- Imagen Bea (.png) -->
+                <div class="w-40 sm:w-48 shrink-0">
+                    <img src="Bea.png" alt="Beatriz Briceño-Picón" class="w-full aspect-[4/5] object-cover rounded-md shadow-sm grayscale hover:grayscale-0 transition-all duration-500" onerror="this.src='https://via.placeholder.com/300x400?text=Bea.png'">
                 </div>
 
-                <!-- Text Content -->
-                <div class="lg:col-span-7 space-y-8 text-left">
-                    <div class="space-y-4">
-                        <span class="inline-block text-sm font-bold tracking-widest text-pine uppercase">
-                            Custodia y Memoria Familiar
-                        </span>
-                        <h2 class="font-title text-4xl sm:text-5xl font-extrabold tracking-tight text-charcoal-900">
-                            Beatriz Briceño-Picón
-                        </h2>
-                        <div class="w-16 h-1 bg-pastelYellow"></div>
-                    </div>
+                <!-- Text Content Minimalista -->
+                <div class="w-full space-y-4 text-center md:text-left mt-2">
+                    <h2 class="font-title text-2xl font-bold tracking-tight text-charcoal-900">
+                        Beatriz Briceño-Picón
+                    </h2>
                     
-                    <div class="space-y-6 text-base md:text-lg text-charcoal-800 leading-relaxed font-medium">
+                    <div class="space-y-3 text-sm text-charcoal-800 leading-relaxed max-w-xl mx-auto md:mx-0">
                         <p>
-                            Hija del ilustre ensayista, Beatriz Briceño-Picón ha dedicado su vida a una labor silente pero trascendental: la conservación, cuidado y difusión del invaluable legado histórico, literario y moral de su padre.
+                            Ha dedicado parte de su vida a una labor silente pero trascendental: la conservación, cuidado y difusión del invaluable legado histórico, literario y moral de su padre.
                         </p>
                         <p>
-                            Persona que aportó su profunda sabiduría y convicciones para conservar y preservar la institución de la familia. Su formación profesional y espiritual le ha permitido no solo resguardar documentos, sino mantener vivo el espíritu humanista de la casa Briceño para las nuevas generaciones.
-                        </p>
-                        <p>
-                            Sus metas siempre han apuntado a que la trascendencia de los valores patrios y éticos no se pierdan en el olvido, haciendo del hogar el primer centro de aprendizaje cívico.
+                            Aportó su profunda sabiduría para preservar la institución familiar, haciendo del hogar el primer centro de aprendizaje cívico para que los valores patrios trasciendan a las nuevas generaciones.
                         </p>
                     </div>
 
-                    <div class="pt-8">
-                        <a href="LINK_SOBRE_LA_VIDA_DE_BEATRIZ" target="_blank" class="inline-flex justify-center items-center px-8 py-4 bg-pine text-white text-sm font-bold uppercase tracking-widest hover:bg-pastelYellow hover:text-pine transition-all duration-300 shadow-lg rounded-md">
+                    <div class="pt-2">
+                        <a href="LINK_SOBRE_LA_VIDA_DE_BEATRIZ" target="_blank" class="inline-flex items-center text-pine text-xs font-bold uppercase tracking-widest hover:text-pastelYellow-hover transition-colors">
                             Conocer más sobre su vida
-                            <i data-lucide="arrow-right" class="w-5 h-5 ml-3"></i>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                         </a>
                     </div>
                 </div>
@@ -304,52 +273,42 @@
 
     <!-- FOOTER -->
     <footer id="contacto" class="bg-pine-dark text-white mt-auto">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20 grid grid-cols-1 md:grid-cols-12 gap-12">
-            <div class="md:col-span-5 space-y-6">
-                <h3 class="font-title text-2xl font-extrabold tracking-wider uppercase text-pastelYellow">Fundación MBI</h3>
-                <p class="text-sm md:text-base text-gray-200 leading-relaxed font-medium max-w-sm">
-                    Institución civil dedicada a la preservación del patrimonio histórico, intelectual y ético de Don Mario Briceño-Iragorry.
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-5 space-y-4">
+                <h3 class="font-title text-xl font-extrabold tracking-wider uppercase text-pastelYellow">Mario Briceño-Iragorry Hoy</h3>
+                <p class="text-sm text-gray-200 leading-relaxed max-w-sm">
+                    Espacio dedicado a la preservación del patrimonio histórico, intelectual y ético de Don Mario Briceño-Iragorry.
                 </p>
             </div>
-            <div class="md:col-span-7 space-y-6">
-                <h4 class="text-base font-bold tracking-widest text-pastelYellow uppercase">Contacto</h4>
-                <div class="space-y-4 pt-2 text-sm md:text-base text-white font-medium">
+            <div class="md:col-span-7 space-y-4">
+                <h4 class="text-sm font-bold tracking-widest text-pastelYellow uppercase">Contacto</h4>
+                <div class="space-y-3 pt-1 text-sm text-white">
                     <p class="flex items-center">
-                        <i data-lucide="mail" class="w-6 h-6 mr-3 text-pastelYellow"></i>
-                        <a href="mailto:contacto@fundacionmbi.org" class="hover:text-pastelYellow transition-colors">contacto@fundacionmbi.org</a>
+                        <i data-lucide="mail" class="w-5 h-5 mr-3 text-pastelYellow"></i>
+                        <a href="mailto:contacto@mariobricenoiragorryhoy.org" class="hover:text-pastelYellow transition-colors">contacto@mariobricenoiragorryhoy.org</a>
                     </p>
                     <p class="flex items-center">
-                        <i data-lucide="phone" class="w-6 h-6 mr-3 text-pastelYellow"></i>
+                        <i data-lucide="phone" class="w-5 h-5 mr-3 text-pastelYellow"></i>
                         <span>Caracas / Trujillo, Venezuela</span>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="border-t border-pine bg-pine text-center py-8">
+        <div class="border-t border-pine bg-pine text-center py-6">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <p class="text-xs md:text-sm text-gray-100 font-medium">© 2026 Fundación Mario Briceño-Iragorry. Todos los derechos reservados.</p>
+                <p class="text-xs text-gray-100">© 2026 Mario Briceño-Iragorry Hoy. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Inicializar Iconos Lucide
         lucide.createIcons();
-
-        // Lógica del Menú Móvil
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Cerrar Menú Móvil al hacer clic en un enlace
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
         });
     </script>
 </body>
