@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Briceño-Iragorry Hoy</title>
     
-    <!-- Miniatura / Favicon -->
-    <link rel="icon" href="logo.png" type="image/png">
+    <!-- Miniatura / Favicon: Asegúrate de tener una imagen llamada MBI.png en tu carpeta -->
+    <link rel="icon" href="MBI.png" type="image/png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <!-- MULTIMEDIA, SHORTS Y PODCAST -->
+    <!-- MULTIMEDIA Y CONTENIDO DESTACADO -->
     <section id="multimedia" class="py-24 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             
@@ -135,8 +135,8 @@
                 <div class="w-16 h-1 bg-pastelYellow mx-auto rounded-full"></div>
             </div>
             
+            <!-- Videos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Video 1: CARLOS MATA -->
                 <div class="space-y-4">
                     <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
                         <source src="CARLOS%20MATA.mp4" type="video/mp4">
@@ -145,14 +145,12 @@
                     <p class="text-xs text-center text-charcoal-800 font-medium px-4">Breve y sentida reflexión del reconocido actor venezolano sobre la identidad nacional y los valores cívicos propuestos por MBI.</p>
                 </div>
                 
-                <!-- Video 2 -->
                 <div class="space-y-4">
                     <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster2.jpg">
                         <source src="short2.mp4" type="video/mp4">
                     </video>
                 </div>
                 
-                <!-- Video 3 -->
                 <div class="space-y-4">
                     <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster3.jpg">
                         <source src="short3.mp4" type="video/mp4">
@@ -160,28 +158,57 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN PODCAST -->
+            <!-- SECCIÓN CONTENIDO DESTACADO (Podcast + Idearium) -->
             <div class="mt-24">
                 <div class="text-center space-y-4 mb-10">
                     <span class="text-sm font-bold tracking-widest text-pine uppercase">Escucha y Reflexiona</span>
-                    <h3 class="font-title text-2xl sm:text-3xl font-extrabold text-charcoal-900 uppercase">Podcast Destacado</h3>
+                    <h3 class="font-title text-2xl sm:text-3xl font-extrabold text-charcoal-900 uppercase">Contenido Destacado</h3>
                     <div class="w-12 h-1 bg-pastelYellow mx-auto rounded-full"></div>
                 </div>
                 
-                <div class="flex justify-center">
-                    <a href="https://www.youtube.com/watch?v=Do_vIhL5OBw&t=100s" target="_blank" class="flex flex-col md:flex-row items-center bg-gray-50 border border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 max-w-3xl group block">
-                        <div class="w-full md:w-1/3 shrink-0 overflow-hidden rounded-xl border border-gray-200">
-                            <!-- IMAGEN DEL PODCAST CORREGIDA AQUÍ -->
-                            <img src="Podcast.jpeg" alt="La Palabra Compartida #24 - Mario Briceño Iragorry: el Pensador" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/300x300?text=Podcast'">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                    
+                    <!-- Tarjeta Podcast (Horizontal y Grande) -->
+                    <a href="https://www.youtube.com/watch?v=Do_vIhL5OBw&t=100s" target="_blank" class="flex flex-col bg-gray-50 border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
+                        <div class="w-full overflow-hidden border-b border-gray-200">
+                            <!-- La imagen ahora es horizontal y ocupa el ancho completo -->
+                            <img src="Podcast.jpeg" alt="La Palabra Compartida #24 - Mario Briceño Iragorry: el Pensador" class="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Podcast'">
                         </div>
-                        <div class="mt-6 md:mt-0 md:ml-8 text-center md:text-left">
-                            <h4 class="font-title text-xl font-bold text-charcoal-900 mt-2 group-hover:text-pine transition-colors">La Palabra Compartida #24 - Mario Briceño Iragorry: el Pensador</h4>
-                            <p class="text-sm text-gray-600 mt-3 font-medium leading-relaxed">Profundo análisis sonoro sobre su pensamiento, legado histórico y su incuestionable vigencia en la sociedad actual.</p>
-                            <span class="inline-flex items-center mt-5 text-pine text-xs font-bold uppercase tracking-widest bg-pastelYellow/50 px-4 py-2 rounded-full group-hover:bg-pastelYellow transition-colors">
-                                Escuchar en YouTube <i data-lucide="play-circle" class="w-5 h-5 ml-2"></i>
+                        <div class="p-8 text-center md:text-left flex flex-col justify-between flex-grow">
+                            <div>
+                                <span class="text-xs font-bold tracking-widest text-pine uppercase">La Palabra Compartida</span>
+                                <h4 class="font-title text-xl font-bold text-charcoal-900 mt-2 group-hover:text-pine transition-colors">Mario Briceño-Iragorry, el pensador</h4>
+                                <p class="text-sm text-gray-600 mt-3 font-medium leading-relaxed">Profundo análisis sonoro sobre su pensamiento, legado histórico y su incuestionable vigencia en la sociedad actual.</p>
+                            </div>
+                            <span class="inline-flex items-center justify-center md:justify-start mt-6 text-pine text-xs font-bold uppercase tracking-widest transition-colors">
+                                Escuchar en YouTube <i data-lucide="play-circle" class="w-5 h-5 ml-2 text-pastelYellow-hover"></i>
                             </span>
                         </div>
                     </a>
+
+                    <!-- Tarjeta Idearium Caribe -->
+                    <!-- Reemplaza "LINK_AL_POST_DE_IG" por el enlace real de Instagram y "idearium.jpg" por la imagen -->
+                    <a href="LINK_AL_POST_DE_IG" target="_blank" class="flex flex-col bg-gray-50 border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
+                        <div class="w-full overflow-hidden border-b border-gray-200">
+                            <img src="idearium.jpg" alt="Mario Briceño-Iragorry por Idearium Caribe" class="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Idearium+Caribe'">
+                        </div>
+                        <div class="p-8 text-center md:text-left flex flex-col justify-between flex-grow">
+                            <div>
+                                <span class="text-xs font-bold tracking-widest text-pine uppercase">Idearium Caribe</span>
+                                <h4 class="font-title text-xl font-bold text-charcoal-900 mt-2 group-hover:text-pine transition-colors">¿Quién fue Mario Briceño-Iragorry?</h4>
+                                <p class="text-sm text-gray-600 mt-3 font-medium leading-relaxed">
+                                    Historiador, ensayista y diplomático que consagró su vida al servicio de Venezuela. Una figura extraordinaria que dedicó su obra a señalar los caminos para nuestro fortalecimiento moral y cultural.
+                                </p>
+                                <p class="text-[10px] text-gray-400 mt-4 uppercase tracking-wider font-semibold">
+                                    ✍🏻 Inv: José A. Paniagua & Jonhangel Sanchez | 🎨 Diseño: Jonhangel Sanchez
+                                </p>
+                            </div>
+                            <span class="inline-flex items-center justify-center md:justify-start mt-6 text-pine text-xs font-bold uppercase tracking-widest transition-colors">
+                                Ver post en Instagram <i data-lucide="external-link" class="w-4 h-4 ml-2 text-pastelYellow-hover"></i>
+                            </span>
+                        </div>
+                    </a>
+
                 </div>
             </div>
             
