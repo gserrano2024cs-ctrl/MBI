@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Briceño-Iragorry Hoy</title>
     
-    <!-- Miniatura / Favicon generado por código (Fondo amarillo pollito y letras MBI) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23FDE047%22 rx=%2220%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial, sans-serif%22 font-size=%2240%22 font-weight=%22bold%22 fill=%22%23115E3E%22 text-anchor=%22middle%22>MBI</text></svg>" type="image/svg+xml">
+    <!-- Miniatura / Favicon generado por código -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZERTA0NyIgcng9IjIwIi8+PHRleHQgeD0iNTAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMTE1RTNFIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NQkk8L3RleHQ+PC9zdmc+" type="image/svg+xml">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,8 +78,9 @@
 
     <!-- FONDO PRINCIPAL / HERO SECTION -->
     <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden mt-10">
+        <!-- AQUÍ ESTÁ EL NOMBRE CORRECTO DE LA IMAGEN DEL ÁVILA -->
         <div class="absolute inset-0 bg-cover bg-center blur-sm transform scale-105" 
-             style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL_AVILA.jpg'); z-index: -1;">
+             style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL ÁVIL.jpeg'); z-index: -1;">
         </div>
         
         <div class="relative z-10 px-4">
@@ -114,14 +115,18 @@
 
             <div class="w-32 h-1 bg-pastelYellow mx-auto rounded-full"></div>
 
-            <blockquote class="p-8 md:p-10 bg-gray-50 border-l-8 border-pine shadow-sm text-left rounded-r-lg">
-                <p class="font-serif text-lg md:text-xl text-charcoal-800 italic leading-relaxed">
-                    «Parafraseando a Rodríguez Legendre al examinar el pensamiento de Briceño Iragorry, Universidad y Juventud no son meros espacios de estudio, sino el auténtico bastión moral e intelectual de la nación. De su unión depende la formación de una conciencia crítica indispensable para defender los valores patrios y frenar el avance del pragmatismo que alimenta la dinámica del antipaís.»
-                </p>
-                <footer class="mt-6 text-sm font-bold tracking-widest uppercase text-gray-500">
-                    — Fidel Rodríguez Legendre <span class="block mt-2 font-medium capitalize text-gray-400">En su libro "Al filo de la hora undécima"</span>
-                </footer>
-            </blockquote>
+            <!-- CITA DE FIDEL RODRÍGUEZ LEGENDRE CON SU FOTO -->
+            <div class="p-8 md:p-10 bg-gray-50 border-l-8 border-pine shadow-sm text-left rounded-r-lg flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <img src="fidel.webp" alt="Fidel Rodríguez Legendre" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-md shrink-0 border-4 border-white" onerror="this.src='https://via.placeholder.com/150?text=Fidel'">
+                <blockquote class="flex-1">
+                    <p class="font-serif text-lg md:text-xl text-charcoal-800 italic leading-relaxed">
+                        «Parafraseando a Rodríguez Legendre al examinar el pensamiento de Briceño Iragorry, Universidad y Juventud no son meros espacios de estudio, sino el auténtico bastión moral e intelectual de la nación. De su unión depende la formación de una conciencia crítica indispensable para defender los valores patrios y frenar el avance del pragmatismo que alimenta la dinámica del antipaís.»
+                    </p>
+                    <footer class="mt-5 text-sm font-bold tracking-widest uppercase text-gray-500">
+                        — Fidel Rodríguez Legendre <span class="block mt-1 font-medium capitalize text-gray-400">En su libro "Al filo de la hora undécima"</span>
+                    </footer>
+                </blockquote>
+            </div>
         </div>
     </section>
 
@@ -145,15 +150,17 @@
                     <p class="text-xs text-center text-charcoal-800 font-medium px-4">Breve y sentida reflexión sobre la identidad nacional y los valores cívicos propuestos por MBI.</p>
                 </div>
                 
+                <!-- VIDEO: mbiescritor.mp4 -->
                 <div class="space-y-4">
-                    <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster2.jpg">
-                        <source src="short2.mp4" type="video/mp4">
+                    <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
+                        <source src="mbiescritor.mp4" type="video/mp4">
                     </video>
                 </div>
                 
+                <!-- VIDEO: enciclopedia.mp4 -->
                 <div class="space-y-4">
-                    <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls poster="poster3.jpg">
-                        <source src="short3.mp4" type="video/mp4">
+                    <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
+                        <source src="enciclopedia.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -276,8 +283,7 @@
                             <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                                 <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
                             </div>
-                            <!-- IMAGEN ACTUALIZADA AQUÍ -->
-                            <img src="riberas.jpeg" alt="Portada de Los Riberas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Los+Riberas'">
+                            <img src="riberas.jpg" alt="Portada de Los Riberas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Los+Riberas'">
                         </div>
                         <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Los Riberas</h3>
                     </div>
