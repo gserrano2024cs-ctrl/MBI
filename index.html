@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Briceño-Iragorry Hoy</title>
-    <title>Mario Briceño-Iragorry Hoy</title>
+    
     <!-- ========================================== -->
     <!-- META ETIQUETAS PARA VISTA PREVIA (GITHUB)  -->
     <!-- ========================================== -->
@@ -25,8 +25,14 @@
     <meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/logo.png">
     <!-- ========================================== -->
     
-    <!-- Miniatura / Favicon generado por código (Fondo amarillo pollito y letras MBI) -->
-   <link rel="icon" href="mbi.png?v=1" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="mbi.png?v=1" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -90,7 +96,7 @@
         </div>
     </header>
 
-    <!-- FONDO PRINCIPAL / HERO SECTION (TAMAÑO REDUCIDO) -->
+    <!-- FONDO PRINCIPAL / HERO SECTION -->
     <section id="inicio" class="relative h-[75vh] flex items-center justify-center text-center text-white overflow-hidden mt-12 lg:mt-20">
         <div class="absolute inset-0 bg-cover bg-center blur-sm transform scale-105" 
              style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL ÁVIL.jpeg'); z-index: -1;">
@@ -128,7 +134,6 @@
 
             <div class="w-32 h-1 bg-pastelYellow mx-auto rounded-full"></div>
 
-            <!-- CITA DE FIDEL RODRÍGUEZ LEGENDRE CON SU FOTO -->
             <div class="p-8 md:p-10 bg-gray-50 border-l-8 border-pine shadow-sm text-left rounded-r-lg flex flex-col md:flex-row gap-8 items-center md:items-start">
                 <img src="fidel.webp" alt="Fidel Rodríguez Legendre" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-md shrink-0 border-4 border-white" onerror="this.src='https://via.placeholder.com/150?text=Fidel'">
                 <blockquote class="flex-1">
@@ -163,14 +168,12 @@
                     <p class="text-xs text-center text-charcoal-800 font-medium px-4">Breve y sentida reflexión sobre la identidad nacional y los valores cívicos propuestos por MBI.</p>
                 </div>
                 
-                <!-- VIDEO: mbiescritor.mp4 -->
                 <div class="space-y-4">
                     <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
                         <source src="mbiescritor.mp4" type="video/mp4">
                     </video>
                 </div>
                 
-                <!-- VIDEO: enciclopedia.mp4 -->
                 <div class="space-y-4">
                     <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-gray-50" controls>
                         <source src="enciclopedia.mp4" type="video/mp4">
@@ -178,7 +181,7 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN CONTENIDO DESTACADO (Podcast + Idearium) -->
+            <!-- SECCIÓN CONTENIDO DESTACADO -->
             <div class="mt-24">
                 <div class="text-center space-y-4 mb-10">
                     <span class="text-sm font-bold tracking-widest text-pine uppercase">Escucha y Reflexiona</span>
@@ -188,7 +191,6 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
                     
-                    <!-- Tarjeta Podcast -->
                     <a href="https://www.youtube.com/watch?v=Do_vIhL5OBw&t=100s" target="_blank" class="flex flex-col bg-gray-50 border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
                         <div class="w-full overflow-hidden border-b border-gray-200">
                             <img src="Podcast.jpeg" alt="La Palabra Compartida #24 - Mario Briceño Iragorry: el Pensador" class="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Podcast'">
@@ -205,7 +207,6 @@
                         </div>
                     </a>
 
-                    <!-- Tarjeta Idearium Caribe -->
                     <a href="https://www.instagram.com/p/DZfkS0bEaaV/?igsh=djIxN3ZvcTEyOXNq&img_index=1" target="_blank" class="flex flex-col bg-gray-50 border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
                         <div class="w-full overflow-hidden border-b border-gray-200 bg-white">
                             <img src="idearium.png" alt="Mario Briceño-Iragorry por Idearium Caribe" class="w-full h-64 md:h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Idearium+Caribe'">
@@ -266,7 +267,6 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
                 
-                <!-- Book 1: Mensaje sin Destino -->
                 <a href="https://www.banesco.com/biblioteca-digital/coleccion-clasicos-venezolanos-ensayo-mensaje-sin-destino/" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block relative">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -279,7 +279,6 @@
                     </div>
                 </a>
 
-                <!-- Book 2: Lecturas Venezolanas -->
                 <a href="Lecturas Venezolanas.pdf" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block relative">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -292,7 +291,6 @@
                     </div>
                 </a>
 
-                <!-- Book 3: Los Riberas (IMAGEN ACTUALIZADA A riberas.jpeg) -->
                 <a href="https://bibliotecadigital.bnv.gob.ve/?s=LOS+RIBERAS" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block relative">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -305,7 +303,6 @@
                     </div>
                 </a>
                 
-                <!-- Book 4: Tapices de Historia Patria -->
                 <a href="https://bibliotecadigital.bnv.gob.ve/?p=986" target="_blank" class="bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group block relative">
                     <div class="space-y-6">
                         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -379,7 +376,7 @@
                 <div class="space-y-3 pt-1 text-sm text-white">
                     <p class="flex items-center">
                         <i data-lucide="mail" class="w-5 h-5 mr-3 text-pastelYellow"></i>
-                        <a href="mailto:beatriz.beamer@gmail.com" class="hover:text-pastelYellow transition-colors lowercase">beatrizbeamer@gmail.com</a>
+                        <a href="mailto:beatriz.beamer@gmail.com" class="hover:text-pastelYellow transition-colors lowercase">beatriz.beamer@gmail.com</a>
                     </p>
                     <p class="flex items-center">
                         <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-pastelYellow"></i>
