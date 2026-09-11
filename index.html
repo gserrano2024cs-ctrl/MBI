@@ -10,22 +10,20 @@
     <!-- ========================================== -->
     <meta property="og:title" content="Mario Briceño-Iragorry Hoy">
     <meta property="og:description" content="Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.">
-    
-    <!-- ENLACE REAL DE VERCEL -->
     <meta property="og:url" content="https://mbihoy.vercel.app/">
     <meta property="og:type" content="website">
-    
-    <!-- IMAGEN DE VISTA PREVIA -->
-    <meta property="og:image" content="https://mbihoy.vercel.app/logo.png">
+    <!-- Imagen de vista previa para redes sociales -->
+    <meta property="og:image" content="https://mbihoy.vercel.app/EL ÁVIL.jpeg">
 
-    <!-- Tarjeta grande para Twitter / X / WhatsApp -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mario Briceño-Iragorry Hoy">
     <meta name="twitter:description" content="Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.">
-    <meta name="twitter:image" content="https://mbihoy.vercel.app/logo.png">
+    <meta name="twitter:image" content="https://mbihoy.vercel.app/EL ÁVIL.jpeg">
     <!-- ========================================== -->
     
-    <!-- FAVICON 100% CÓDIGO: Fondo Verde Pino y Letras MBI Amarillas (Sin problemas de caché) -->
+    <!-- ========================================== -->
+    <!-- FAVICON 100% CÓDIGO (Verde Pino, MBI Amarillo) -->
+    <!-- ========================================== -->
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzExNUUzRSIgcng9IjIwIi8+PHRleHQgeD0iNTAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkVGMDhBIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NQkk8L3RleHQ+PC9zdmc+" type="image/svg+xml">
     
     <!-- Google Fonts -->
@@ -46,7 +44,7 @@
                 extend: {
                     colors: {
                         pine: { DEFAULT: '#115E3E', dark: '#0A3B26', light: '#1B8257' },
-                        pastelYellow: { DEFAULT: '#FEF08A', hover: '#FDE047' },
+                        pastelYellow: { DEFAULT: '#FEF08A', hover: '#FDE047', dark: '#EAB308' },
                         charcoal: { 800: '#333333', 900: '#1A1A1A' }
                     },
                     fontFamily: {
@@ -70,8 +68,17 @@
     <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
             
+            <!-- LOGO CREATIVO EN CÓDIGO -->
             <div class="logo-container flex items-center">
-                <img src="logo.png" alt="Mario Briceño-Iragorry hoy" class="h-12 md:h-16 object-contain" onerror="this.src='https://via.placeholder.com/200x60?text=LOGO.PNG'">
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="bg-pine text-pastelYellow w-12 h-12 flex items-center justify-center rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <span class="font-cursiva text-2xl font-bold">MBI</span>
+                    </div>
+                    <div class="hidden sm:flex flex-col justify-center">
+                        <span class="font-title font-extrabold text-pine text-lg leading-none tracking-tight uppercase">Mario Briceño</span>
+                        <span class="font-cursiva text-pastelYellow-dark text-xl leading-none mt-1">hoy</span>
+                    </div>
+                </a>
             </div>
             
             <nav class="hidden lg:flex space-x-8 text-sm tracking-widest font-semibold uppercase text-charcoal-800">
@@ -102,13 +109,7 @@
              style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL ÁVIL.jpeg'); z-index: -1;">
         </div>
         
-        <div class="relative z-10 px-4 pt-10 flex flex-col items-center">
-            
-            <!-- LOGO SENCILLO MBI (NUEVO) -->
-            <div class="w-20 h-20 sm:w-24 sm:h-24 bg-pine border-2 border-pastelYellow rounded-2xl flex items-center justify-center mb-6 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <span class="text-3xl sm:text-4xl font-bold text-pastelYellow font-sans tracking-wide">MBI</span>
-            </div>
-
+        <div class="relative z-10 px-4 pt-10">
             <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tight leading-tight">
                 Mario Briceño-Iragorry<br class="md:hidden">
                 <span class="font-cursiva text-pastelYellow ml-3 text-6xl sm:text-7xl md:text-8xl lg:text-9xl lowercase block md:inline mt-2 md:mt-0 drop-shadow-md">hoy</span>
