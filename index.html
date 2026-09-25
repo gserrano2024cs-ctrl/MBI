@@ -51,6 +51,22 @@
                         title: ['Montserrat', 'sans-serif'],
                         serif: ['Montserrat', 'sans-serif'],
                         cursiva: ['Dancing Script', 'cursive'],
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'fade-in-up-delay-1': 'fadeInUp 1s ease-out 0.4s forwards',
+                        'fade-in-up-delay-2': 'fadeInUp 1s ease-out 0.8s forwards',
+                        'fade-in': 'fadeIn 2s ease-out forwards',
                     }
                 }
             }
@@ -100,24 +116,29 @@
         </div>
     </header>
 
-    <!-- FONDO PRINCIPAL / HERO SECTION -->
+    <!-- FONDO PRINCIPAL / HERO SECTION CON ANIMACIONES Y TEXTURA ARRUGADA -->
     <section id="inicio" class="relative h-[75vh] flex items-center justify-center text-center text-white overflow-hidden mt-12 lg:mt-20">
-        <div class="absolute inset-0 bg-cover bg-center blur-sm transform scale-105" 
-             style="background-image: linear-gradient(rgba(17, 94, 62, 0.4), rgba(10, 59, 38, 0.7)), url('EL ÁVIL.jpeg'); z-index: -1;">
+        
+        <!-- Textura arrugada superpuesta sobre el gradiente verde y la imagen de fondo -->
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105 opacity-0 animate-fade-in" 
+             style="background-image: linear-gradient(rgba(17, 94, 62, 0.5), rgba(10, 59, 38, 0.9)), url('https://www.transparenttextures.com/patterns/crumpled-paper.png'), url('EL ÁVIL.jpeg'); background-blend-mode: normal, overlay, normal; z-index: -1;">
         </div>
         
         <div class="relative z-10 px-4 pt-10">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tight leading-tight">
+            <!-- Título con entrada smooth -->
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tight leading-tight opacity-0 animate-fade-in-up">
                 Mario Briceño-Iragorry<br class="md:hidden">
                 <span class="font-cursiva text-pastelYellow ml-3 text-6xl sm:text-7xl md:text-8xl lg:text-9xl lowercase block md:inline mt-2 md:mt-0 drop-shadow-md">hoy</span>
             </h1>
-            <p class="mt-6 md:mt-8 max-w-3xl mx-auto text-sm md:text-xl text-white font-medium italic drop-shadow-md">
+            <!-- Párrafo con entrada retrasada -->
+            <p class="mt-6 md:mt-8 max-w-3xl mx-auto text-sm md:text-xl text-white font-medium italic drop-shadow-md opacity-0 animate-fade-in-up-delay-1">
                 Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.
             </p>
         </div>
         
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#pensamiento" class="text-pastelYellow opacity-90 hover:opacity-100 hover:text-white transition-colors">
+        <!-- Flecha con entrada aún más retrasada y rebote infinito -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in-up-delay-2">
+            <a href="#pensamiento" class="text-pastelYellow opacity-90 hover:opacity-100 hover:text-white transition-colors block animate-bounce">
                 <i data-lucide="chevron-down" class="w-10 h-10 md:w-12 md:h-12"></i>
             </a>
         </div>
@@ -355,14 +376,14 @@
                             </div>
                         </a>
 
-                        <!-- Libro 6: María, Caracas y la Unidad de la Patria -->
+                        <!-- Libro 6: María, Caracas y la Unidad de la Patria (Página 1) -->
                         <a href="María, Caracas y la Unidad de la Patria (1).pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
                             <div class="space-y-4">
                                 <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
                                     <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                                         <i data-lucide="download" class="w-10 h-10 text-white drop-shadow-md"></i>
                                     </div>
-                                    <img src="maria_caracas.jpeg" alt="Portada de María, Caracas y la Unidad de la Patria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=María+Caracas'">
+                                    <img src="maria_caracas_pag1.jpg" alt="Primera página de María, Caracas y la Unidad de la Patria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Primera+Página'">
                                 </div>
                                 <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors leading-tight">María, Caracas y la Unidad de la Patria[cite: 1]</h3>
                                 <p class="text-[11px] text-gray-500 text-center font-medium leading-relaxed mt-2">
@@ -371,14 +392,14 @@
                             </div>
                         </a>
 
-                        <!-- Libro 7: Don Ramón J. habla de Don Mario -->
+                        <!-- Libro 7: Don Ramón J. habla de Don Mario (Página 1) -->
                         <a href="Don Ramon J habla de Don Mario.pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
                             <div class="space-y-6">
                                 <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
                                     <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                                         <i data-lucide="download" class="w-10 h-10 text-white drop-shadow-md"></i>
                                     </div>
-                                    <img src="don_ramon.jpeg" alt="Portada de Don Ramón J. habla de Don Mario" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Don+Ramon+J'">
+                                    <img src="don_ramon_pag1.jpg" alt="Primera página de Don Ramón J. habla de Don Mario" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Primera+Página'">
                                 </div>
                                 <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors leading-tight">Don Ramón J. habla de Don Mario</h3>
                             </div>
