@@ -1,4 +1,382 @@
-<!-- Libro 6: María, Caracas y la Unidad de la Patria (Página 1) -->
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Briceño-Iragorry Hoy</title>
+    
+    <!-- ========================================== -->
+    <!-- META ETIQUETAS PARA VISTA PREVIA (VERCEL)  -->
+    <!-- ========================================== -->
+    <meta property="og:title" content="Mario Briceño-Iragorry Hoy">
+    <meta property="og:description" content="Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.">
+    <meta property="og:url" content="https://mbihoy.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- IMAGEN DE VISTA PREVIA (.PNG) -->
+    <meta property="og:image" content="https://mbihoy.vercel.app/preview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mario Briceño-Iragorry Hoy">
+    <meta name="twitter:description" content="Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.">
+    <meta name="twitter:image" content="https://mbihoy.vercel.app/preview.png">
+    <!-- ========================================== -->
+    
+    <!-- Favicon 100% Código -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzExNUUzRSIgcng9IjIwIi8+PHRleHQgeD0iNTAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkVGMDhBIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NQkk8L3RleHQ+PC9zdmc+" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pine: { DEFAULT: '#115E3E', dark: '#0A3B26', light: '#1B8257' },
+                        pastelYellow: { DEFAULT: '#FEF08A', hover: '#FDE047', dark: '#EAB308' },
+                        charcoal: { 800: '#333333', 900: '#1A1A1A' }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        title: ['Montserrat', 'sans-serif'],
+                        serif: ['Montserrat', 'sans-serif'],
+                        cursiva: ['Dancing Script', 'cursive'],
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'fade-in-up-delay-1': 'fadeInUp 1s ease-out 0.4s forwards',
+                        'fade-in-up-delay-2': 'fadeInUp 1s ease-out 0.8s forwards',
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-charcoal-900 font-sans antialiased selection:bg-pine selection:text-white flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            
+            <!-- LOGO CREATIVO EN CÓDIGO -->
+            <div class="logo-container flex items-center">
+                <a href="#inicio" class="flex items-center gap-2 group">
+                    <span class="font-cursiva text-4xl font-bold text-pine group-hover:scale-105 transition-transform duration-300 drop-shadow-sm">MBI</span>
+                    <div class="hidden sm:flex flex-col justify-center ml-2 border-l-2 border-pastelYellow pl-3">
+                        <span class="font-title font-extrabold text-pine text-lg leading-none tracking-tight uppercase">Mario Briceño</span>
+                        <span class="font-cursiva text-pastelYellow-dark text-xl leading-none mt-1">hoy</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex space-x-8 text-sm tracking-widest font-semibold uppercase text-charcoal-800">
+                <a href="#inicio" class="hover:text-pine transition-colors">Inicio</a>
+                <a href="#multimedia" class="hover:text-pine transition-colors">Multimedia</a>
+                <a href="#catalogo" class="hover:text-pine transition-colors">Catálogo de Obras</a>
+                <a href="#beatriz" class="hover:text-pine transition-colors">Beatriz Briceño</a>
+            </nav>
+
+            <a href="#contacto" class="hidden lg:inline-flex items-center text-sm uppercase font-semibold tracking-widest px-6 py-3 bg-pastelYellow text-pine hover:bg-pine hover:text-white rounded-md transition-all duration-300 shadow-sm border border-transparent hover:border-pine">Contacto</a>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-pine focus:outline-none" aria-label="Abrir Menú">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white border-b border-gray-200 px-6 py-6 space-y-5 shadow-lg">
+            <a href="#inicio" class="block text-sm font-semibold uppercase tracking-widest text-charcoal-800 hover:text-pine">Inicio</a>
+            <a href="#multimedia" class="block text-sm font-semibold uppercase tracking-widest text-charcoal-800 hover:text-pine">Multimedia</a>
+            <a href="#catalogo" class="block text-sm font-semibold uppercase tracking-widest text-charcoal-800 hover:text-pine">Catálogo de Obras</a>
+            <a href="#beatriz" class="block text-sm font-semibold uppercase tracking-widest text-charcoal-800 hover:text-pine">Beatriz Briceño</a>
+        </div>
+    </header>
+
+    <!-- FONDO PRINCIPAL / HERO SECTION CON ANIMACIONES Y TEXTURA ARRUGADA -->
+    <section id="inicio" class="relative h-[75vh] flex items-center justify-center text-center text-white overflow-hidden mt-12 lg:mt-20">
+        
+        <!-- Textura arrugada superpuesta sobre el gradiente verde y la imagen de fondo -->
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105 opacity-0 animate-fade-in" 
+             style="background-image: linear-gradient(rgba(17, 94, 62, 0.5), rgba(10, 59, 38, 0.9)), url('https://www.transparenttextures.com/patterns/crumpled-paper.png'), url('EL ÁVIL.jpeg'); background-blend-mode: normal, overlay, normal; z-index: -1;">
+        </div>
+        
+        <div class="relative z-10 px-4 pt-10">
+            <!-- Título con entrada smooth -->
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tight leading-tight opacity-0 animate-fade-in-up">
+                Mario Briceño-Iragorry<br class="md:hidden">
+                <span class="font-cursiva text-pastelYellow ml-3 text-6xl sm:text-7xl md:text-8xl lg:text-9xl lowercase block md:inline mt-2 md:mt-0 drop-shadow-md">hoy</span>
+            </h1>
+            <!-- Párrafo con entrada retrasada -->
+            <p class="mt-6 md:mt-8 max-w-3xl mx-auto text-sm md:text-xl text-white font-medium italic drop-shadow-md opacity-0 animate-fade-in-up-delay-1">
+                Un mensaje con destino para la venezolanidad, preservando el pensamiento de quien nos enseñó a mirarnos por dentro.
+            </p>
+        </div>
+        
+        <!-- Flecha con entrada aún más retrasada y rebote infinito -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in-up-delay-2">
+            <a href="#pensamiento" class="text-pastelYellow opacity-90 hover:opacity-100 hover:text-white transition-colors block animate-bounce">
+                <i data-lucide="chevron-down" class="w-10 h-10 md:w-12 md:h-12"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- TEXTURA DE PAPEL FIJA (Envuelve todo desde la cita hacia abajo) -->
+    <div class="bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] bg-fixed bg-repeat">
+
+        <!-- CITAS Y PENSAMIENTO -->
+        <section id="pensamiento" class="py-20 border-b border-gray-100/50 bg-transparent">
+            <div class="max-w-5xl mx-auto px-6 lg:px-12 space-y-16">
+                <blockquote class="text-center space-y-6">
+                    <i data-lucide="quote" class="w-10 h-10 mx-auto text-pastelYellow-hover mb-4"></i>
+                    <p class="font-serif text-xl md:text-3xl text-pine-dark leading-relaxed font-medium italic">
+                        «Sin negar el sentido ecuménico del hombre, he defendido de manera ardorosa y sistemática los valores de lo venezolano y he denunciado en forma angustiada el proceso de disolución promovido en el esqueleto de la sociedad nacional por la presencia de antivalores que desdicen nuestra tradición de pueblo».
+                    </p>
+                    <footer class="text-sm md:text-base font-bold tracking-widest uppercase text-pine">
+                        — Mario Briceño Iragorry, 1954
+                    </footer>
+                </blockquote>
+
+                <div class="w-32 h-1 bg-pastelYellow mx-auto rounded-full"></div>
+
+                <div class="p-8 md:p-10 bg-white/80 backdrop-blur-sm border-l-8 border-pine shadow-sm text-left rounded-r-lg flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <img src="fidel.webp" alt="Fidel Rodríguez Legendre" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full shadow-md shrink-0 border-4 border-white" onerror="this.src='https://via.placeholder.com/150?text=Fidel'">
+                    <blockquote class="flex-1">
+                        <p class="font-serif text-lg md:text-xl text-charcoal-800 italic leading-relaxed">
+                            «Parafraseando a Rodríguez Legendre al examinar el pensamiento de Briceño Iragorry, Universidad y Juventud no son meros espacios de estudio, sino el auténtico bastión moral e intelectual de la nación. De su unión depende la formación de una conciencia crítica indispensable para defender los valores patrios y frenar el avance del pragmatismo que alimenta la dinámica del antipaís.»
+                        </p>
+                        <footer class="mt-5 text-sm font-bold tracking-widest uppercase text-gray-500">
+                            — Fidel Rodríguez Legendre <span class="block mt-1 font-medium capitalize text-gray-400">En su libro "Al filo de la hora undécima"</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- MULTIMEDIA Y CONTENIDO DESTACADO -->
+        <section id="multimedia" class="py-24 border-b border-gray-100/50 bg-transparent">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
+                <div class="text-center space-y-4 mb-16">
+                    <span class="text-sm font-bold tracking-widest text-pine uppercase">Dinamismo Visual</span>
+                    <h2 class="font-title text-3xl sm:text-4xl font-extrabold text-charcoal-900 uppercase">Multimedia</h2>
+                    <div class="w-16 h-1 bg-pastelYellow mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="space-y-4">
+                        <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-white" controls>
+                            <source src="CARLOS%20MATA.mp4" type="video/mp4">
+                        </video>
+                        <p class="text-xs text-center text-charcoal-800 font-medium px-4 bg-white/50 py-2 rounded-lg backdrop-blur-sm">Breve y sentida reflexión sobre la identidad nacional y los valores cívicos propuestos por MBI.</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-white" controls>
+                            <source src="mbiescritor.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <video class="w-full rounded-2xl aspect-[9/16] bg-black object-cover shadow-xl border-4 border-white" controls>
+                            <source src="enciclopedia.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN CONTENIDO DESTACADO -->
+                <div class="mt-24">
+                    <div class="text-center space-y-4 mb-10">
+                        <span class="text-sm font-bold tracking-widest text-pine uppercase">Escucha y Reflexiona</span>
+                        <h3 class="font-title text-2xl sm:text-3xl font-extrabold text-charcoal-900 uppercase">Contenido Destacado</h3>
+                        <div class="w-12 h-1 bg-pastelYellow mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                        
+                        <a href="https://www.youtube.com/watch?v=Do_vIhL5OBw&t=100s" target="_blank" class="flex flex-col bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
+                            <div class="w-full overflow-hidden border-b border-gray-200">
+                                <img src="Podcast.jpeg" alt="La Palabra Compartida #24 - Mario Briceño Iragorry: el Pensador" class="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Podcast'">
+                            </div>
+                            <div class="p-8 text-center md:text-left flex flex-col justify-between flex-grow">
+                                <div>
+                                    <span class="text-xs font-bold tracking-widest text-pine uppercase">La Palabra Compartida</span>
+                                    <h4 class="font-title text-xl font-bold text-charcoal-900 mt-2 group-hover:text-pine transition-colors">Mario Briceño-Iragorry, el pensador</h4>
+                                    <p class="text-sm text-gray-600 mt-3 font-medium leading-relaxed">Profundo análisis sonoro sobre su pensamiento, legado histórico y su incuestionable vigencia en la sociedad actual.</p>
+                                </div>
+                                <span class="inline-flex items-center justify-center md:justify-start mt-6 text-pine text-xs font-bold uppercase tracking-widest transition-colors">
+                                    Escuchar en YouTube <i data-lucide="play-circle" class="w-5 h-5 ml-2 text-pastelYellow-hover"></i>
+                                </span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/p/DZfkS0bEaaV/?igsh=djIxN3ZvcTEyOXNq&img_index=1" target="_blank" class="flex flex-col bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group block overflow-hidden">
+                            <div class="w-full overflow-hidden border-b border-gray-200 bg-white">
+                                <img src="idearium.png" alt="Mario Briceño-Iragorry por Idearium Caribe" class="w-full h-64 md:h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/800x400?text=Idearium+Caribe'">
+                            </div>
+                            <div class="p-8 text-center md:text-left flex flex-col justify-between flex-grow">
+                                <div>
+                                    <span class="text-xs font-bold tracking-widest text-pine uppercase">Idearium Caribe</span>
+                                    <h4 class="font-title text-xl font-bold text-charcoal-900 mt-2 group-hover:text-pine transition-colors">¿Quién fue Mario Briceño-Iragorry?</h4>
+                                    <p class="text-sm text-gray-600 mt-3 font-medium leading-relaxed">
+                                        Exploramos la vida de una figura extraordinaria de la historia intelectual venezolana. Historiador, ensayista y diplomático, consagró su existencia a comprender a Venezuela y señalar los caminos para su fortalecimiento moral y cultural.
+                                    </p>
+                                    <p class="text-[10px] text-gray-400 mt-4 uppercase tracking-wider font-semibold">
+                                        Investigación: José A. Paniagua y Jonhangel Sanchez | Diseño: Jonhangel Sanchez
+                                    </p>
+                                </div>
+                                <span class="inline-flex items-center justify-center md:justify-start mt-6 text-pine text-xs font-bold uppercase tracking-widest transition-colors">
+                                    Ver post en Instagram <i data-lucide="external-link" class="w-4 h-4 ml-2 text-pastelYellow-hover"></i>
+                                </span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- CATÁLOGO DE OBRAS Y BIBLIOTECA DIGITAL -->
+        <section id="catalogo" class="py-24 border-b border-gray-100/50 bg-transparent">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+                
+                <div class="text-center space-y-4 max-w-3xl mx-auto">
+                    <span class="text-sm font-bold tracking-widest text-pine uppercase">Legado Literario</span>
+                    <h2 class="font-title text-3xl sm:text-4xl font-extrabold text-charcoal-900 uppercase">Catálogo de Obras</h2>
+                    <div class="w-16 h-1 bg-pastelYellow mx-auto rounded-full"></div>
+                    <p class="text-base md:text-lg text-charcoal-800 font-medium pt-6 leading-relaxed bg-white/40 inline-block px-4 py-2 rounded-lg backdrop-blur-sm">
+                        Adéntrate en la vasta variedad de la obra ensayística e histórica de Mario Briceño-Iragorry. Explora algunas de sus portadas más famosas y descarga sus textos.
+                    </p>
+                </div>
+
+                <!-- BOTONES DE CRÉDITOS -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto">
+                    <a href="https://bibliotecadigital.bnv.gob.ve/?coleccion=mario-briceno-iragorry" target="_blank" class="flex items-center px-6 py-5 bg-pine text-white hover:bg-pine-dark transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
+                        <i data-lucide="library" class="w-8 h-8 mr-4 text-pastelYellow group-hover:scale-110 transition-transform shrink-0"></i>
+                        <div class="text-left">
+                            <span class="block text-[10px] uppercase font-bold tracking-widest text-pastelYellow mb-1">Créditos: BNV</span>
+                            <span class="block text-sm sm:text-base font-bold tracking-wide leading-tight">Biblioteca Digital</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://archivo.redhistoriave.org/coleccion/obras-completas-de-mario-briceno-iragorry?page=1&orderby=asc" target="_blank" class="flex items-center px-6 py-5 bg-pastelYellow text-pine hover:bg-pastelYellow-hover transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
+                        <i data-lucide="book-open" class="w-8 h-8 mr-4 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <div class="text-left">
+                            <span class="block text-[10px] uppercase font-bold tracking-widest text-pine-dark opacity-80 mb-1">Créditos: Red Historia VE</span>
+                            <span class="block text-sm sm:text-base font-bold tracking-wide text-pine-dark leading-tight">Archivo Histórico</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.ideariumcaribe.com/p/obras-de-mario-briceno-iragorry" target="_blank" class="flex items-center px-6 py-5 bg-white border-2 border-pine text-pine hover:bg-pine hover:text-white transition-all duration-300 shadow-lg rounded-xl group hover:-translate-y-1">
+                        <i data-lucide="folder-down" class="w-8 h-8 mr-4 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <div class="text-left">
+                            <span class="block text-[10px] uppercase font-bold tracking-widest opacity-80 mb-1 group-hover:text-pastelYellow transition-colors">Créditos: Idearium Caribe</span>
+                            <span class="block text-sm sm:text-base font-bold tracking-wide leading-tight">Descargar Obras</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CARRUSEL DE LIBROS -->
+                <div class="relative mt-16 max-w-6xl mx-auto group/slider">
+                    
+                    <!-- Botón Izquierda -->
+                    <button id="scroll-left" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-white border border-gray-200 text-pine w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-pastelYellow hover:text-charcoal-900 transition-colors z-20 focus:outline-none opacity-90 hover:opacity-100">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+
+                    <!-- Contenedor Deslizante -->
+                    <div id="books-carousel" class="flex gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4 px-4 scroll-smooth">
+                        
+                        <!-- Libro 1: Mensaje sin Destino -->
+                        <a href="https://www.banesco.com/biblioteca-digital/coleccion-clasicos-venezolanos-ensayo-mensaje-sin-destino/" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
+                            <div class="space-y-6">
+                                <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                                    <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                        <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
+                                    </div>
+                                    <img src="mensaje.jpeg" alt="Portada de Mensaje sin Destino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Mensaje+sin+Destino'">
+                                </div>
+                                <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Mensaje sin Destino</h3>
+                            </div>
+                        </a>
+
+                        <!-- Libro 2: Lecturas Venezolanas -->
+                        <a href="Lecturas Venezolanas.pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
+                            <div class="space-y-6">
+                                <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                                    <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                        <i data-lucide="download" class="w-10 h-10 text-white drop-shadow-md"></i>
+                                    </div>
+                                    <img src="LECTURAS%20VENEZOLANAS.jpeg" alt="Portada de Lecturas Venezolanas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Lecturas+Venezolanas'">
+                                </div>
+                                <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Lecturas Venezolanas</h3>
+                            </div>
+                        </a>
+
+                        <!-- Libro 3: Los Riberas -->
+                        <a href="https://bibliotecadigital.bnv.gob.ve/?s=LOS+RIBERAS" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
+                            <div class="space-y-6">
+                                <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                                    <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                        <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
+                                    </div>
+                                    <img src="riberas.jpeg" alt="Portada de Los Riberas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Los+Riberas'">
+                                </div>
+                                <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Los Riberas</h3>
+                            </div>
+                        </a>
+
+                        <!-- Libro 4: Primera Lección para mis Nietas Desterradas -->
+                        <a href="Primera Leccion para mis Nietas Desterradas.pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
+                            <div class="space-y-6">
+                                <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                                    <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                        <i data-lucide="download" class="w-10 h-10 text-white drop-shadow-md"></i>
+                                    </div>
+                                    <img src="mis nietas.jpeg" alt="Portada de Primera Lección para mis Nietas Desterradas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Mis+Nietas'">
+                                </div>
+                                <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Primera Lección para mis Nietas Desterradas</h3>
+                            </div>
+                        </a>
+                        
+                        <!-- Libro 5: Tapices de Historia Patria -->
+                        <a href="https://bibliotecadigital.bnv.gob.ve/?p=986" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
+                            <div class="space-y-6">
+                                <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
+                                    <div class="absolute inset-0 bg-pine/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                                        <i data-lucide="external-link" class="w-10 h-10 text-white drop-shadow-md"></i>
+                                    </div>
+                                    <img src="tapices%20de%20historia%20patria.webp" alt="Portada de Tapices de Historia Patria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0" onerror="this.src='https://via.placeholder.com/300x400?text=Tapices+de+Historia'">
+                                </div>
+                                <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors">Tapices de Historia Patria</h3>
+                            </div>
+                        </a>
+
+                      <!-- Libro 6: María, Caracas y la Unidad de la Patria (Página 1) -->
 <a href="María, Caracas y la Unidad de la Patria (1).pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
     <div class="space-y-4">
         <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -13,8 +391,7 @@
         </p>
     </div>
 </a>
-
-<!-- Libro 7: Mario Briceño Iragorry por Ramón J. Velásquez -->
+                      <!-- Libro 7: Mario Briceño Iragorry por Ramón J. Velásquez -->
 <a href="Mario_Briceno_Iragorry_por_Ramon_J_Velasquez.pdf" target="_blank" class="snap-center shrink-0 w-64 sm:w-72 bg-white border border-gray-100 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 rounded-xl group relative">
     <div class="space-y-6">
         <div class="bg-white aspect-[3/4] flex items-center justify-center overflow-hidden border border-gray-200 rounded-md relative">
@@ -26,3 +403,114 @@
         <h3 class="font-title text-lg font-extrabold text-charcoal-900 text-center group-hover:text-pine transition-colors leading-tight">Mario Briceño Iragorry por Ramón J. Velásquez</h3>
     </div>
 </a>
+
+                    <!-- Botón Derecha -->
+                    <button id="scroll-right" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-white border border-gray-200 text-pine w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-pastelYellow hover:text-charcoal-900 transition-colors z-20 focus:outline-none opacity-90 hover:opacity-100">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- SECCIÓN BEATRIZ BRICEÑO-PICÓN -->
+        <section id="beatriz" class="py-16 border-b border-gray-100/50 bg-transparent">
+            <div class="max-w-4xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-10 bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm border border-gray-100">
+                    
+                    <div class="w-48 sm:w-56 shrink-0 flex flex-col items-center">
+                        <a href="Bea.png" target="_blank" class="block cursor-zoom-in group">
+                            <img src="Bea.png" alt="Beatriz Briceño-Picón" class="w-full aspect-[4/5] object-cover rounded-md shadow-lg border-2 border-white transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://via.placeholder.com/300x400?text=Bea.png'">
+                        </a>
+                        <p class="text-[11px] text-gray-500 italic mt-3 text-center bg-white/50 px-2 py-1 rounded-md">Beatriz en su infancia junto a su padre, en el Cerlag Caracas y en Madrid España</p>
+                    </div>
+
+                    <div class="w-full space-y-4 text-center md:text-left mt-2">
+                        <div>
+                            <h2 class="font-title text-2xl font-bold tracking-tight text-charcoal-900">
+                                Beatriz Briceño-Picón
+                            </h2>
+                            <span class="block text-xs font-bold tracking-widest text-pine uppercase mt-1">
+                                Humanista y Periodista
+                            </span>
+                        </div>
+                        
+                        <div class="space-y-4 text-sm text-charcoal-800 leading-relaxed max-w-xl mx-auto md:mx-0">
+                            <p>
+                                Ha querido siempre entrelazar personas, instituciones, cátedras y empresas que trabajan por mantener la vigencia de su pensamiento.
+                            </p>
+                            <p>
+                                Su empeño ha sido siempre, fortalecer nuestra venezolanidad desde el hogar, la escuela, el campo y los medios de comunicación social, como vía para alcanzar el humanismo integral y solidario abierto a la trascendencia que nuestro mundo reclama.
+                            </p>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="inline-flex items-center text-pine text-xs font-bold uppercase tracking-widest hover:text-pastelYellow-hover transition-colors">
+                                Conocer más sobre su vida
+                                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- FIN DEL ENVOLTORIO DE TEXTURA DE PAPEL -->
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-pine-dark text-white mt-auto z-10 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-5 space-y-4">
+                <h3 class="font-title text-xl font-extrabold tracking-wider uppercase text-pastelYellow">Mario Briceño-Iragorry Hoy</h3>
+                <p class="text-sm text-gray-200 leading-relaxed max-w-sm">
+                    Espacio dedicado a la preservación del patrimonio histórico, intelectual y ético de Don Mario Briceño-Iragorry.
+                </p>
+            </div>
+            <div class="md:col-span-7 space-y-4">
+                <h4 class="text-sm font-bold tracking-widest text-pastelYellow uppercase">Contacto</h4>
+                <div class="space-y-3 pt-1 text-sm text-white">
+                    <p class="flex items-center">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3 text-pastelYellow"></i>
+                        <a href="mailto:beatriz.beamer@gmail.com" class="hover:text-pastelYellow transition-colors lowercase">beatriz.beamer@gmail.com</a>
+                    </p>
+                    <p class="flex items-center">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-pastelYellow"></i>
+                        <span>Caracas, Venezuela</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-pine bg-pine text-center py-6">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <p class="text-xs text-gray-100">© 2026 Mario Briceño-Iragorry Hoy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        });
+
+        // LÓGICA DEL CARRUSEL DE LIBROS
+        const carousel = document.getElementById('books-carousel');
+        const scrollLeftBtn = document.getElementById('scroll-left');
+        const scrollRightBtn = document.getElementById('scroll-right');
+
+        if(scrollLeftBtn && scrollRightBtn && carousel) {
+            scrollLeftBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -320, behavior: 'smooth' });
+            });
+            scrollRightBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: 320, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
